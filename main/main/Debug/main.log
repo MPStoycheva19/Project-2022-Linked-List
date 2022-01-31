@@ -1,11 +1,2 @@
-﻿  main.cpp
-D:\Documents\School\Linked_lists\Project-2022-Linked-List\main\main\main.cpp(8,5): error C3861: 'menu': identifier not found
-  menu.cpp
-D:\Documents\School\Linked_lists\Project-2022-Linked-List\main\main\menu.cpp(14,2): error C2672: 'std::move': no matching overloaded function found
-D:\Documents\School\Linked_lists\Project-2022-Linked-List\main\main\menu.cpp(14,7): error C2780: '_DestTy *std::move(_InIt,_InIt,_DestTy (&)[_DestSize])': expects 3 arguments - 0 provided
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xutility(3951): message : see declaration of 'std::move'
-D:\Documents\School\Linked_lists\Project-2022-Linked-List\main\main\menu.cpp(14,7): error C2780: '_OutIt std::move(_InIt,_InIt,_OutIt)': expects 3 arguments - 0 provided
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xutility(3939): message : see declaration of 'std::move'
-D:\Documents\School\Linked_lists\Project-2022-Linked-List\main\main\menu.cpp(14,7): error C2780: 'remove_reference<_Ty>::type &&std::move(_Ty &&) noexcept': expects 1 arguments - 0 provided
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\type_traits(1464): message : see declaration of 'std::move'
-  Generating Code...
+﻿  menu.cpp
+  main.vcxproj -> D:\Documents\School\Linked_lists\Project-2022-Linked-List\main\Debug\main.exe

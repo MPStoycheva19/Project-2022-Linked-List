@@ -1,3 +1,7 @@
 #pragma once
 
-void test();
+
+
+void menu();
+void actions();
+void move();

@@ -33,13 +33,24 @@ void credits()
 
 void move()
 {
-
-	cout << "Choose where do you want to go" << endl;
+	cout << endl;
+	cout << "Choose where do you want to go ";
 	cin >> choice;
 
 	if (choice == 1)
 	{
+		system("CLS");
 		actions();
+	}
+	else if (choice == 2)
+	{
+		system("CLS");
+		howToUse();
+	}
+	else if (choice == 3)
+	{
+		system("CLS");
+		credits();
 	}
 
 }

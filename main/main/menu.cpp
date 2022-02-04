@@ -7,6 +7,7 @@ using namespace std;
 
 int choice;
 
+
 void menu()
 {
 	cout << setw(150) << " ______           _____          _____________        _____       ____          ____        ____ \n";
@@ -17,9 +18,10 @@ void menu()
 	cout << setw(150) << "|..|   \\...\\/.../   |..|        |....|               |..|  \\...\\ |....|        |....|      |....|\n";
 	cout << setw(150) << "|..|    \\....../    |..|        |....|________       |..|   \\...\\|....|        |....|______|....|\n";
 	cout << setw(152) << "|..|                |..|        |_____________/      |..|    \\........|        |________________|\n\n\n";
-	cout << setw(108) << "1. Actions" << endl << endl;
-	cout << setw(109) << "2. How to use" << endl << endl;
+	cout << setw(107) << "1. Actions" << endl << endl;
+	cout << setw(110) << "2. How to use" << endl << endl;
 	cout << setw(107) << "3. Credits" << endl << endl;
+	cout << setw(104) << "4. Exit" << endl << endl;
 
 	move();
 }
@@ -75,6 +77,7 @@ void actions()
 	cout << "1. Add information" << endl;
 	cout << "2. Search information" << endl;
 	cout << "3. Delete information" << endl;
+	cout << "4. Go back" << endl;
 }
 
 void howToUse()
@@ -110,6 +113,13 @@ void move()
 		system("CLS");
 		credits();
 		goBack();
+	}
+	else if (choice == 4)
+	{
+		
+		system("CLS");
+		cout << "Exited the program successfully." << endl;
+		exit(0);
 	}
 
 }

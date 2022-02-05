@@ -24,7 +24,7 @@ void options()
 		if (key == KEY_UP && (counter >= 2 && counter <= 4))
 		{
 			system("CLS");
-			menu();
+			menu();//menu
 			counter--;
 			cout << endl;
 			cout << "Current selection " << counter << endl;
@@ -33,7 +33,7 @@ void options()
 		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
 		{
 			system("CLS");
-			menu();
+			menu();//menu
 			counter++;
 			cout << endl;
 			cout << "Current selection " << counter << endl;
@@ -170,14 +170,14 @@ void goBack()
 	if (choice == "yes" or choice == "Yes")
 	{
 		system("CLS");
-		menu();
+		options();
 	}
 	else if (choice == "No" or choice == "no")
 	{
 		cout << "You go there anyway!" << endl;
 		Sleep(1000);
 		system("CLS");
-		menu();
+		options();
 	}
 	else
 	{
@@ -191,7 +191,7 @@ void goBack()
 			cin >> choice;
 			if (choice == "yes" or choice == "Yes")
 			{
-				menu();
+				options();
 			}
 			else if (choice == "No" or choice == "no")
 			{
@@ -199,7 +199,7 @@ void goBack()
 				if (save == "No" or save == "no") cout << "You go there anyway!" << endl;
 				Sleep(1000);
 				system("CLS");
-				menu();
+				options();
 
 			}
 		}
@@ -219,6 +219,7 @@ void actionsMenu()
 void addInfo()
 {
 	cout << "Add info" << endl;
+	goBack();
 }
 
 void deleteInfo()

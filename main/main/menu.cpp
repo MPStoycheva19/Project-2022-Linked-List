@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <conio.h>
 #include <windows.h>
 #include "Menu.h"
 
@@ -7,6 +8,74 @@ using namespace std;
 
 int choice;
 
+
+int counter = 1;
+
+void options()
+{
+	menu();
+	cout << endl;
+	cout << "Current selection " << counter << endl;
+	char key;
+	for (int i = 0;;)
+	{
+		key = _getch();
+
+		if (key == KEY_UP && (counter >= 2 && counter <= 4))
+		{
+			system("CLS");
+			menu();
+			counter--;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
+		}
+
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
+		{
+			system("CLS");
+			menu();
+			counter++;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
+		}
+
+		if (key == '\r')
+		{
+			if (counter == 1)
+			{
+				system("CLS");
+				actions();
+				break;
+			}
+
+			else if (counter == 2)
+			{
+				counter = 1;
+				system("CLS");
+				howToUse();
+				goBack();
+				break;
+			}
+
+			else if (counter == 3)
+			{
+				counter = 1;
+				system("CLS");
+				credits();
+				goBack();
+				break;
+			}
+
+			else if (counter == 4)
+			{
+				counter = 1;
+				system("CLS");
+				cout << "Exited the program successfully." << endl;
+				exit(0);
+			}
+		}
+	}
+}
 
 void menu()
 {
@@ -22,8 +91,7 @@ void menu()
 	cout << setw(110) << "2. How to use" << endl << endl;
 	cout << setw(107) << "3. Credits" << endl << endl;
 	cout << setw(104) << "4. Exit" << endl << endl;
-
-	move();
+	cout << "You can navigate using the arrow keys" << endl;
 }
 
 void goBack()
@@ -116,7 +184,7 @@ void move()
 	}
 	else if (choice == 4)
 	{
-		
+
 		system("CLS");
 		cout << "Exited the program successfully." << endl;
 		exit(0);

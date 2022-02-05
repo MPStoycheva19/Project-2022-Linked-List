@@ -94,6 +94,72 @@ void menu()
 	cout << "You can navigate using the arrow keys" << endl;
 }
 
+
+void actions()
+{
+	actionsMenu();
+
+
+	cout << endl;
+	cout << "Current selection " << counter << endl;
+	char key;
+	for (int i = 0;;)
+	{
+		key = _getch();
+
+		if (key == KEY_UP && (counter >= 2 && counter <= 4))
+		{
+			system("CLS");
+			actionsMenu();
+			counter--;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
+		}
+
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
+		{
+			system("CLS");
+			actionsMenu();
+			counter++;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
+		}
+
+		if (key == '\r')
+		{
+			if (counter == 1)
+			{
+				counter = 1;
+				system("CLS");
+				addInfo();
+			}
+
+			else if (counter == 2)
+			{
+				counter = 1;
+				system("CLS");
+				searchInfo();
+			}
+
+			else if (counter == 3)
+			{
+				counter = 1;
+				system("CLS");
+				deleteInfo();
+			}
+
+			else if (counter == 4)
+			{
+				counter = 1;
+				system("CLS");
+				options();
+			}
+		}
+	}
+
+}
+
+
 void goBack()
 {
 	string choice;
@@ -140,12 +206,29 @@ void goBack()
 	}
 }
 
-void actions()
+void actionsMenu()
 {
 	cout << "1. Add information" << endl;
 	cout << "2. Search information" << endl;
 	cout << "3. Delete information" << endl;
-	cout << "4. Go back" << endl;
+	cout << "4. Go back to the menu" << endl << endl;
+	cout << "You can navigate using the arrow keys" << endl;
+}
+
+
+void addInfo()
+{
+	cout << "Add info" << endl;
+}
+
+void deleteInfo()
+{
+	cout << "Delete info" << endl;
+}
+
+void searchInfo()
+{
+	cout << "Search" << endl;
 }
 
 void howToUse()
@@ -189,5 +272,7 @@ void move()
 		cout << "Exited the program successfully." << endl;
 		exit(0);
 	}
+
+	
 
 }

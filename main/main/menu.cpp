@@ -225,21 +225,25 @@ void addInfo()
 void deleteInfo()
 {
 	cout << "Delete info" << endl;
+	goBack();
 }
 
 void searchInfo()
 {
 	cout << "Search" << endl;
+	goBack();
 }
 
 void howToUse()
 {
 	cout << "How to use" << endl;
+	goBack();
 }
 
 void credits()
 {
 	cout << "Credits" << endl;
+	goBack();
 }
 
 void move()

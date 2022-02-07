@@ -236,16 +236,28 @@ void searchInfo()
 
 void howToUse()
 {
-	cout << "How to use" << endl;
+	cout << setw(140) << " _____________________________________________________________" << endl;
+	cout << setw(140) << "|                                                            |" << endl;
+	cout << setw(140) << "|                                                            |" << endl;
+	cout << setw(140) << "|                         How to use                         |" << endl;
+	cout << setw(140) << "|                                                            |" << endl;
+	cout << setw(140) << "|                                                            |" << endl;
+	cout << setw(140) << "|             1. You can add or delete information           |" << endl;
+	cout << setw(140) << "|             as you want using the options                  |" << endl;
+	cout << setw(140) << "|                                                            |" << endl;
+	cout << setw(140) << "|             2. You can use the arrow keys to move          |" << endl;
+	cout << setw(140) << "|                                                            |" << endl;
+	cout << setw(140) << "|             3. You can search information                  |" << endl;
+	cout << setw(140) << "|                                                            |" << endl;
+	cout << setw(140) << "|              (the others later)                            |" << endl;
+	cout << setw(140) << "|                                                            |" << endl;
+	cout << setw(140) << "|____________________________________________________________|" << endl;
 	goBack();
 }
 
 void credits()
 {
-	cout << "Marieta Stoycheva - Scrum Trainer" << endl;
-	cout << "Georgi Hrisimov - Front-End Developer" << endl;
-	cout << "Egor Semenov - Back-End Developer" << endl;
-	cout << "Yoan Tanev - QA" << endl << endl;
+	cout << "Credits" << endl;
 	goBack();
 }
 
@@ -281,6 +293,6 @@ void move()
 		exit(0);
 	}
 
-	
+
 
 }

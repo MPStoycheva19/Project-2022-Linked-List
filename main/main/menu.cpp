@@ -208,11 +208,19 @@ void goBack()
 
 void actionsMenu()
 {
-	cout << "1. Add information" << endl;
-	cout << "2. Search information" << endl;
-	cout << "3. Delete information" << endl;
-	cout << "4. Go back to the menu" << endl << endl;
-	cout << "You can navigate using the arrow keys" << endl;
+	cout << endl << endl;
+	cout << setw(139) << "_____________________________________________________________\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|                   What do you want to do?                  |\n\n";
+	cout << setw(140) << "|                    1. Add information                      |\n\n";
+	cout << setw(140) << "|                  2. Search information                     |\n\n";
+	cout << setw(140) << "|                  3. Delete information                     |\n\n";
+	cout << setw(140) << "|                  4. Go back to the menu                    |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|____________________________________________________________|\n\n";
+	
+	cout << setw(125) << "You can navigate using the arrow keys\n\n";
 }
 
 
@@ -236,22 +244,21 @@ void searchInfo()
 
 void howToUse()
 {
-	cout << setw(140) << " _____________________________________________________________" << endl;
-	cout << setw(140) << "|                                                            |" << endl;
-	cout << setw(140) << "|                                                            |" << endl;
-	cout << setw(140) << "|                         How to use                         |" << endl;
-	cout << setw(140) << "|                                                            |" << endl;
-	cout << setw(140) << "|                                                            |" << endl;
-	cout << setw(140) << "|             1. You can add or delete information           |" << endl;
-	cout << setw(140) << "|             as you want using the options                  |" << endl;
-	cout << setw(140) << "|                                                            |" << endl;
-	cout << setw(140) << "|             2. You can use the arrow keys to move          |" << endl;
-	cout << setw(140) << "|                                                            |" << endl;
-	cout << setw(140) << "|             3. You can search information                  |" << endl;
-	cout << setw(140) << "|                                                            |" << endl;
-	cout << setw(140) << "|              (the others later)                            |" << endl;
-	cout << setw(140) << "|                                                            |" << endl;
-	cout << setw(140) << "|____________________________________________________________|" << endl;
+	cout << setw(138) << " _____________________________________________________________" << endl;
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|                         How to use                         |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|             1. You can add or delete information           |\n\n";
+	cout << setw(140) << "|             as you want using the options                  |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|             2. You can use the arrow keys to move          |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|             3. You can search information                  |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|              (the others later)                            |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|____________________________________________________________|\n\n";
 	goBack();
 }
 

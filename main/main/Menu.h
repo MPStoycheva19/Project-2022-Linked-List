@@ -9,9 +9,7 @@ void move();
 void goBack();
 void options();
 
-void addInfo();
-void deleteInfo();
-void searchInfo();
+
 
 
 #define KEY_UP 72

@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <windows.h>
 #include "Menu.h"
+#include "Actions.h"
 
 using namespace std;
 
@@ -223,24 +224,6 @@ void actionsMenu()
 	cout << setw(125) << "You can navigate using the arrow keys\n\n";
 }
 
-
-void addInfo()
-{
-	cout << "Add info" << endl;
-	goBack();
-}
-
-void deleteInfo()
-{
-	cout << "Delete info" << endl;
-	goBack();
-}
-
-void searchInfo()
-{
-	cout << "Search" << endl;
-	goBack();
-}
 
 void howToUse()
 {

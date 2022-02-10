@@ -11,3 +11,8 @@ struct Article {
 	int ID;  //Код на Грей
 	
 };
+
+void addInfo();
+void deleteInfo();
+void searchInfo();
+void goBack();

@@ -3,20 +3,20 @@
 
 using namespace std;
 
-void addInfo()
-{
-	cout << "Add info" << endl;
-	goBack();
-}
-
-void deleteInfo()
-{
-	cout << "Delete info" << endl;
-	goBack();
-}
-
-void searchInfo()
-{
-	cout << "Search" << endl;
-	goBack();
-}
+//void addInfo()
+//{
+//	cout << "Add info" << endl;
+//	goBack();
+//}
+//
+//void deleteInfo()
+//{
+//	cout << "Delete info" << endl;
+//	goBack();
+//}
+//
+//void searchInfo()
+//{
+//	cout << "Search" << endl;
+//	goBack();
+//}

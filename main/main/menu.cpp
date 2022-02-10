@@ -2,8 +2,9 @@
 #include <iomanip>
 #include <conio.h>
 #include <windows.h>
+#include <string>
 #include "Menu.h"
-#include "Actions.h"
+#include "data.h"
 
 using namespace std;
 
@@ -220,10 +221,46 @@ void actionsMenu()
 	cout << setw(140) << "|                  4. Go back to the menu                    |\n\n";
 	cout << setw(140) << "|                                                            |\n\n";
 	cout << setw(140) << "|____________________________________________________________|\n\n";
-	
+
 	cout << setw(125) << "You can navigate using the arrow keys\n\n";
 }
 
+
+void addInfo()
+{
+	Node* head = NULL;
+	string input;
+	cout << "                         Add info" << endl;
+	cout << "        Please enter the information you want to add" << endl;
+	getline(cin, input);
+	push(&head, input);
+	cout << endl << "Your information has been succesfully written" << endl;
+	goBack();
+}
+
+void deleteInfo()
+{
+	Node* head = NULL;
+	cout << "         Please select the information which you want to delete" << endl;
+	printList(head);
+	string info;
+	/*deleteNode(&head, info);*/
+	goBack();
+}
+
+void searchInfo()
+{
+	Node* head = NULL;
+	cout << "               Search" << endl;
+	cout << "      Please type the information you would like to search" << endl;
+	string input;
+	getline(cin, input);
+	if (searchData(head, input) == "0") { cout << "There is no such information"; goBack(); }
+	else {
+		cout << endl << "Here are your search results: " << searchData(head, input);
+		goBack();
+	}
+}
 
 void howToUse()
 {

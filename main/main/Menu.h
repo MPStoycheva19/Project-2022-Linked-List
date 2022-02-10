@@ -1,5 +1,11 @@
 #pragma once
 
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <windows.h>
+#include <string>
+
 void menu();
 void actions();
 void actionsMenu();
@@ -9,7 +15,9 @@ void move();
 void goBack();
 void options();
 
-
+void addInfo();
+void deleteInfo();
+void searchInfo();
 
 
 #define KEY_UP 72

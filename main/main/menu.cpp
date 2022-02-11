@@ -17,7 +17,7 @@ void options()
 {
 	menu();
 	cout << endl;
-	cout << "Current selection " << counter << endl;
+	cout << setw(113) << "Current selection " << counter << endl;
 	char key;
 	for (int i = 0;;)
 	{
@@ -29,7 +29,7 @@ void options()
 			menu();//menu
 			counter--;
 			cout << endl;
-			cout << "Current selection " << counter << endl;
+			cout << setw(113) << "Current selection " << counter << endl;
 		}
 
 		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
@@ -38,7 +38,7 @@ void options()
 			menu();//menu
 			counter++;
 			cout << endl;
-			cout << "Current selection " << counter << endl;
+			cout << setw(113) << "Current selection " << counter << endl;
 		}
 
 		if (key == '\r')
@@ -93,7 +93,7 @@ void menu()
 	cout << setw(110) << "2. How to use" << endl << endl;
 	cout << setw(107) << "3. Credits" << endl << endl;
 	cout << setw(104) << "4. Exit" << endl << endl;
-	cout << "You can navigate using the arrow keys" << endl;
+	cout << setw(122) << "You can navigate using the arrow keys" << endl << endl;
 }
 
 
@@ -103,7 +103,7 @@ void actions()
 
 
 	cout << endl;
-	cout << "Current selection " << counter << endl;
+	cout << setw(115)<< "Current selection " << counter << endl;
 	char key;
 	for (int i = 0;;)
 	{
@@ -115,7 +115,7 @@ void actions()
 			actionsMenu();
 			counter--;
 			cout << endl;
-			cout << "Current selection " << counter << endl;
+			cout << setw(115) << "Current selection " << counter << endl;
 		}
 
 		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
@@ -124,7 +124,7 @@ void actions()
 			actionsMenu();
 			counter++;
 			cout << endl;
-			cout << "Current selection " << counter << endl;
+			cout << setw(115) << "Current selection " << counter << endl;
 		}
 
 		if (key == '\r')
@@ -188,11 +188,12 @@ void goBack()
 		{
 			system("CLS");
 			cout << "Incorrect input" << endl;
-			cout << "Do you want to return to the start menu?" << endl;
+			cout << " Do you want to return to the start menu?" << endl;
 			cout << "Yes/No" << endl;
 			cin >> choice;
 			if (choice == "yes" or choice == "Yes")
 			{
+				system("CLS");
 				options();
 			}
 			else if (choice == "No" or choice == "no")
@@ -222,7 +223,7 @@ void actionsMenu()
 	cout << setw(140) << "|                                                            |\n\n";
 	cout << setw(140) << "|____________________________________________________________|\n\n";
 
-	cout << setw(125) << "You can navigate using the arrow keys\n\n";
+	cout << setw(128) << "You can navigate using the arrow keys\n\n";
 }
 
 

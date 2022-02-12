@@ -249,8 +249,12 @@ void deleteInfo()
 	int count = getCount(head);
 	int c;
 	cout << "      Please enter the number of the element which you want to delete" << endl;
+	cout << "        Enter 0 to go back  " << endl;
 	cin >> c;
-	if (c <= count)
+	if (c == 0) {
+		goBack();
+	}
+	if (c <= count && c >= 1)
 	{
 		c--;
 		deleteAtPosition(&head, c);

@@ -13,6 +13,8 @@ int choice;
 
 int counter = 1;
 
+Node* head = NULL;
+
 void options()
 {
 	menu();
@@ -229,36 +231,53 @@ void actionsMenu()
 
 void addInfo()
 {
-	Node* head = NULL;
 	string input;
 	cout << "                         Add info" << endl;
 	cout << "        Please enter the information you want to add" << endl;
+	cin.ignore();
 	getline(cin, input);
 	push(&head, input);
 	cout << endl << "Your information has been succesfully written" << endl;
+	input.clear();
 	goBack();
 }
 
 void deleteInfo()
 {
-	Node* head = NULL;
 	cout << "         Please select the information which you want to delete" << endl;
 	printList(head);
-	string info;
-	/*deleteNode(&head, info);*/
-	goBack();
+	int count = getCount(head);
+	int c;
+	cout << "      Please enter the number of the element which you want to delete" << endl;
+	cin >> c;
+	if (c <= count)
+	{
+		c--;
+		deleteAtPosition(&head, c);
+		cout << "Information has been deleted succesfully" << endl;
+		goBack();
+	}
+	else {
+		/*deleteNode(&head, info);*/
+		cout << "Incorrect input";
+		goBack();
+	}	
 }
 
 void searchInfo()
 {
-	Node* head = NULL;
 	cout << "               Search" << endl;
 	cout << "      Please type the information you would like to search" << endl;
+	cin.ignore();
 	string input;
 	getline(cin, input);
-	if (searchData(head, input) == "0") { cout << "There is no such information"; goBack(); }
+	if (searchData(head, input) == "0") 
+	{ 
+		cout << "There is no such information" << endl; 
+		goBack(); 
+	}
 	else {
-		cout << endl << "Here are your search results: " << searchData(head, input);
+		cout << endl << "Here are your search results: " << searchData(head, input) << endl;
 		goBack();
 	}
 }
@@ -315,7 +334,6 @@ void move()
 	}
 	else if (choice == 4)
 	{
-
 		system("CLS");
 		cout << "Exited the program successfully." << endl;
 		exit(0);

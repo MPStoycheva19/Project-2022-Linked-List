@@ -13,10 +13,12 @@ void push(Node** head_ref, string new_data)
 
 void printList(Node* node)
 {
+    int c = 1;
     while (node != NULL)
     {
-        cout << node->data << endl;
+        cout << c << ". " << node->data << endl;
         node = node->next;
+        c++;
     }
 }
 
@@ -58,34 +60,28 @@ void append(Node** head_ref, string new_data)
     return;
 }
 
-int search(Node* head, string x)
+int getCount(Node* head)
 {
-    int counter = 0;
+    int count = 0;
     Node* current = head;
     while (current != NULL)
     {
-        counter++;
-        if (current->data == x)
-            return counter;
+        count++;
         current = current->next;
     }
-    return 0;
+    return count;
 }
 
 string searchData(Node* head, string key)
 {
     if (head == NULL)
-    {
         return "0";
-    }
-    if (head->data == key)
-    {
+
+    size_t found = head->data.find(key);
+    if (found != string::npos)
         return head->data;
-    }
-    else
-    {
-        return searchData(head->next, key);
-    }
+
+    return searchData(head->next, key);
 }
 
 void deleteNode(Node** head_ref, string key)
@@ -112,4 +108,44 @@ void deleteNode(Node** head_ref, string key)
         prev->next = temp->next;
         delete temp;
     }
+}
+
+void deleteAtPosition(Node** head_ref, int position)
+{
+
+    // If linked list is empty
+    if (*head_ref == NULL)
+        return;
+
+    // Store head node
+    Node* temp = *head_ref;
+
+    // If head needs to be removed
+    if (position == 0) {
+
+        // Change head
+        *head_ref = temp->next;
+
+        // Free old head
+        free(temp);
+        return;
+    }
+
+    // Find previous node of the node to be deleted
+    for (int i = 0; temp != NULL && i < position - 1; i++)
+        temp = temp->next;
+
+    // If position is more than number of nodes
+    if (temp == NULL || temp->next == NULL)
+        return;
+
+    // Node temp->next is the node to be deleted
+    // Store pointer to the next of node to be deleted
+    Node* next = temp->next->next;
+
+    // Unlink the node from linked list
+    free(temp->next); // Free memory
+
+    // Unlink the deleted node from list
+    temp->next = next;
 }

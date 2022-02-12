@@ -259,7 +259,7 @@ void deleteInfo()
 	}
 	else {
 		/*deleteNode(&head, info);*/
-		cout << "Incorrect input";
+		cout << "Incorrect input" << endl;
 		goBack();
 	}	
 }

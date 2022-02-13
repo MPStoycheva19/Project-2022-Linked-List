@@ -12,6 +12,7 @@
 <ul>
 <li>Our team</li>
 <li>The task</li>
+<li>End product</li>
 <li>How to install</li>
 
 </ul><br><hr>
@@ -39,12 +40,15 @@
   </tr>
 </table>
 <br><br><hr>
-<h2 align="center"><i>The Task</i></h2>
+<h2 align="center"><i>The Task</i><br><br></h2>
 <p>Our task is to create an application for registration and management of historical events, implemented through linked lists.
 The application should contain information about historical events such as
 the date of the event. The other fields can
 be: topic, title, place, leader, participants, result, etc.</p>
 <br><hr>
+<h2 align="center"><i>End product</i></h2>
+<img src="pictures/action_screenshot.png" alt="screenshot" >
+<hr>
 <h2 align="center"><i>How to install</i></h2>
 <h3><i>1. Open the Command Prompt on your computer</i></h3>
 <h3><i>2. Clone the repo</i></h3>

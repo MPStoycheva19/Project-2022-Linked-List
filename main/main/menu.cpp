@@ -362,7 +362,6 @@ void deleteInfo()
 	}
 	else 
 	{
-		/*deleteNode(&head, info);*/
 		cout << "Incorrect input" << endl;
 		goBack();
 	}	

@@ -95,7 +95,8 @@ void menu()
 	cout << setw(110) << "2. How to use" << endl << endl;
 	cout << setw(107) << "3. Credits" << endl << endl;
 	cout << setw(104) << "4. Exit" << endl << endl;
-	cout << setw(122) << "You can navigate using the arrow keys" << endl << endl;
+	cout << setw(122) << "You can navigate using the arrow keys" << endl;
+	cout << setw(125) << "but for more information go to -How to use-" << endl << endl;
 }
 
 
@@ -288,10 +289,16 @@ void searchInfo()
 
 void howToUse()
 {
+	cout << endl << endl;
+	cout << setw(133) << "|....|      |....|  |...........    |............/\n";
+	cout << setw(125) << "|....|      |....|  |   .......|    |....|\n";
+	cout << setw(131) << "|....|      |....|  |   |           |....|______\n";
+	cout << setw(131) << "|....|      |....|  |   |......     |........../\n";
+	cout << setw(125) << "|....|      |....|  |......    |    |....|\n";
+	cout << setw(134) << "|....|______|....|  ......|    |    |....|________ \n";
+	cout << setw(136) << "|________________|  |__________|    |_____________/\n\n\n";
 	cout << setw(138) << " _____________________________________________________________" << endl;
 	cout << setw(140) << "|                                                            |\n\n";
-	cout << setw(140) << "|                                                            |\n\n";
-	cout << setw(140) << "|                         How to use                         |\n\n";
 	cout << setw(140) << "|                                                            |\n\n";
 	cout << setw(140) << "|             1. You can add or delete information           |\n\n";
 	cout << setw(140) << "|             as you want using the options                  |\n\n";
@@ -300,7 +307,10 @@ void howToUse()
 	cout << setw(140) << "|                                                            |\n\n";
 	cout << setw(140) << "|             3. You can search information                  |\n\n";
 	cout << setw(140) << "|                                                            |\n\n";
-	cout << setw(140) << "|              (the others later)                            |\n\n";
+	cout << setw(140) << "|             4. You need to press space when you            |\n\n";
+	cout << setw(140) << "|             want to add new events                         |\n\n";
+	cout << setw(140) << "|                                                            |\n\n";
+	cout << setw(140) << "|             5. Enjoy !                                     |\n\n";
 	cout << setw(140) << "|                                                            |\n\n";
 	cout << setw(140) << "|____________________________________________________________|\n\n";
 	goBack();

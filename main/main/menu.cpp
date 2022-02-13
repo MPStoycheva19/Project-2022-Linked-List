@@ -10,14 +10,58 @@ using namespace std;
 
 int choice;
 
-
 int counter = 1;
 
 Node* head = NULL;
 
+
+void menu(int chooseOption)
+{
+	cout << setw(150) << " ______           _____          _____________        _____       ____          ____        ____ \n";
+	cout << setw(150) << "|......\\        /......|        |............/       |.....\\     |....|        |....|      |....|\n";
+	cout << setw(150) << "|.......\\      /.......|        |....|               |......\\    |....|        |....|      |....|\n";
+	cout << setw(150) << "|..| \\...\\    /.../ |..|        |....|______         |..|\\...\\   |....|        |....|      |....|\n";
+	cout << setw(150) << "|..|  \\...\\  /.../  |..|        |........../         |..| \\...\\  |....|        |....|      |....|\n";
+	cout << setw(150) << "|..|   \\...\\/.../   |..|        |....|               |..|  \\...\\ |....|        |....|      |....|\n";
+	cout << setw(150) << "|..|    \\....../    |..|        |....|________       |..|   \\...\\|....|        |....|______|....|\n";
+	cout << setw(152) << "|..|                |..|        |_____________/      |..|    \\........|        |________________|\n\n\n";
+
+	if (chooseOption == 1)
+	{
+		cout << setw(107) << "---> 1. Actions" << endl << endl;
+		cout << setw(110) << "2. How to use" << endl << endl;
+		cout << setw(107) << "3. Credits" << endl << endl;
+		cout << setw(104) << "4. Exit" << endl << endl;
+	}
+	else if (chooseOption == 2)
+	{
+		cout << setw(107) << "1. Actions" << endl << endl;
+		cout << setw(110) << "---> 2. How to use" << endl << endl;
+		cout << setw(107) << "3. Credits" << endl << endl;
+		cout << setw(104) << "4. Exit" << endl << endl;
+	}
+	else if (chooseOption == 3)
+	{
+		cout << setw(107) << "1. Actions" << endl << endl;
+		cout << setw(110) << "2. How to use" << endl << endl;
+		cout << setw(107) << "---> 3. Credits" << endl << endl;
+		cout << setw(104) << "4. Exit" << endl << endl;
+	}
+	else if (chooseOption == 4)
+	{
+		cout << setw(107) << "1. Actions" << endl << endl;
+		cout << setw(110) << "2. How to use" << endl << endl;
+		cout << setw(107) << "3. Credits" << endl << endl;
+		cout << setw(104) << "---> 4. Exit" << endl << endl;
+	}
+
+	cout << setw(122) << "You can navigate using the arrow keys" << endl;
+	cout << setw(125) << "but for more information go to -How to use-" << endl;
+}
+
 void options()
 {
-	menu();
+	menu(counter);
 	cout << endl;
 	cout << setw(113) << "Current selection " << counter << endl;
 	char key;
@@ -28,19 +72,17 @@ void options()
 		if (key == KEY_UP && (counter >= 2 && counter <= 4))
 		{
 			system("CLS");
-			menu();//menu
 			counter--;
-			cout << endl;
-			cout << setw(113) << "Current selection " << counter << endl;
+			
+			menu(counter);//menu
 		}
 
 		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
 		{
 			system("CLS");
-			menu();//menu
 			counter++;
-			cout << endl;
-			cout << setw(113) << "Current selection " << counter << endl;
+			
+			menu(counter);//menu
 		}
 
 		if (key == '\r')
@@ -81,29 +123,69 @@ void options()
 	}
 }
 
-void menu()
+void actionsMenu(int counter)
 {
-	cout << setw(150) << " ______           _____          _____________        _____       ____          ____        ____ \n";
-	cout << setw(150) << "|......\\        /......|        |............/       |.....\\     |....|        |....|      |....|\n";
-	cout << setw(150) << "|.......\\      /.......|        |....|               |......\\    |....|        |....|      |....|\n";
-	cout << setw(150) << "|..| \\...\\    /.../ |..|        |....|______         |..|\\...\\   |....|        |....|      |....|\n";
-	cout << setw(150) << "|..|  \\...\\  /.../  |..|        |........../         |..| \\...\\  |....|        |....|      |....|\n";
-	cout << setw(150) << "|..|   \\...\\/.../   |..|        |....|               |..|  \\...\\ |....|        |....|      |....|\n";
-	cout << setw(150) << "|..|    \\....../    |..|        |....|________       |..|   \\...\\|....|        |....|______|....|\n";
-	cout << setw(152) << "|..|                |..|        |_____________/      |..|    \\........|        |________________|\n\n\n";
-	cout << setw(107) << "1. Actions" << endl << endl;
-	cout << setw(110) << "2. How to use" << endl << endl;
-	cout << setw(107) << "3. Credits" << endl << endl;
-	cout << setw(104) << "4. Exit" << endl << endl;
-	cout << setw(122) << "You can navigate using the arrow keys" << endl;
-	cout << setw(125) << "but for more information go to -How to use-" << endl << endl;
-}
+	cout << endl << endl;
+	cout << setw(156) << "       ______        __________     _____________       __________       _________        ____      ____ \n";
+	cout << setw(156) << "    /......\\      |.........|    |............|      |..........|     |.........|      |....\\    |....|\n";
+	cout << setw(156) << "   /.../\\...\\     |...|              |....|             |....|        |...| |...|      |.....\\   |....|\n";
+	cout << setw(156) << "  /..........\\    |...|              |....|             |....|        |...| |...|      |..|\\..\\  |....|\n";
+	cout << setw(156) << " /..../   \\...\\   |...|_____         |....|           __|....|___     |...|_|...|      |..| \\..\\ |....|\n";
+	cout << setw(157) << "/..../     \\...\\  |_________|        |____|          |___________|    |_________|      |..|  \\........|\n\n";
 
+	if (counter == 1) 
+	{
+		cout << setw(139) << "_____________________________________________________________\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|               ---> 1. Add information                      |\n\n";
+		cout << setw(140) << "|                  2. Search information                     |\n\n";
+		cout << setw(140) << "|                  3. Delete information                     |\n\n";
+		cout << setw(140) << "|                  4. Go back to the menu                    |\n\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|____________________________________________________________|\n\n";
+	}
+	else if (counter == 2) {
+		cout << setw(139) << "_____________________________________________________________\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|                    1. Add information                      |\n\n";
+		cout << setw(140) << "|              --->  2. Search information                   |\n\n";
+		cout << setw(140) << "|                  3. Delete information                     |\n\n";
+		cout << setw(140) << "|                  4. Go back to the menu                    |\n\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|____________________________________________________________|\n\n";
+	}
+	else if (counter == 3) {
+		cout << setw(139) << "_____________________________________________________________\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|                    1. Add information                      |\n\n";
+		cout << setw(140) << "|                  2. Search information                     |\n\n";
+		cout << setw(140) << "|               ---> 3. Delete information                   |\n\n";
+		cout << setw(140) << "|                  4. Go back to the menu                    |\n\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|____________________________________________________________|\n\n";
+	}
+	else if (counter == 4) {
+		cout << setw(139) << "_____________________________________________________________\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|                    1. Add information                      |\n\n";
+		cout << setw(140) << "|                  2. Search information                     |\n\n";
+		cout << setw(140) << "|                  3. Delete information                     |\n\n";
+		cout << setw(140) << "|             ---> 4. Go back to the menu                    |\n\n";
+		cout << setw(140) << "|                                                            |\n\n";
+		cout << setw(140) << "|____________________________________________________________|\n\n";
+	}
+	
+
+	cout << setw(128) << "You can navigate using the arrow keys\n\n";
+}
 
 void actions()
 {
-	actionsMenu();
-
+	actionsMenu(counter);
 
 	cout << endl;
 	cout << setw(115)<< "Current selection " << counter << endl;
@@ -115,19 +197,17 @@ void actions()
 		if (key == KEY_UP && (counter >= 2 && counter <= 4))
 		{
 			system("CLS");
-			actionsMenu();
+			
 			counter--;
-			cout << endl;
-			cout << setw(115) << "Current selection " << counter << endl;
+			actionsMenu(counter);
 		}
 
 		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
 		{
 			system("CLS");
-			actionsMenu();
+			
 			counter++;
-			cout << endl;
-			cout << setw(115) << "Current selection " << counter << endl;
+			actionsMenu(counter);
 		}
 
 		if (key == '\r')
@@ -212,24 +292,6 @@ void goBack()
 	}
 }
 
-void actionsMenu()
-{
-	cout << endl << endl;
-	cout << setw(139) << "_____________________________________________________________\n";
-	cout << setw(140) << "|                                                            |\n\n";
-	cout << setw(140) << "|                                                            |\n\n";
-	cout << setw(140) << "|                   What do you want to do?                  |\n\n";
-	cout << setw(140) << "|                    1. Add information                      |\n\n";
-	cout << setw(140) << "|                  2. Search information                     |\n\n";
-	cout << setw(140) << "|                  3. Delete information                     |\n\n";
-	cout << setw(140) << "|                  4. Go back to the menu                    |\n\n";
-	cout << setw(140) << "|                                                            |\n\n";
-	cout << setw(140) << "|____________________________________________________________|\n\n";
-
-	cout << setw(128) << "You can navigate using the arrow keys\n\n";
-}
-
-
 void addInfo()
 {
 	string input;
@@ -291,11 +353,11 @@ void howToUse()
 {
 	cout << endl << endl;
 	cout << setw(133) << "|....|      |....|  |...........    |............/\n";
-	cout << setw(125) << "|....|      |....|  |   .......|    |....|\n";
-	cout << setw(131) << "|....|      |....|  |   |           |....|______\n";
-	cout << setw(131) << "|....|      |....|  |   |......     |........../\n";
-	cout << setw(125) << "|....|      |....|  |......    |    |....|\n";
-	cout << setw(134) << "|....|______|....|  ......|    |    |....|________ \n";
+	cout << setw(125) << "|....|      |....|  |..........|    |....|\n";
+	cout << setw(131) << "|....|      |....|  |...|           |....|______\n";
+	cout << setw(131) << "|....|      |....|  |...|......     |........../\n";
+	cout << setw(125) << "|....|      |....|  |..........|    |....|\n";
+	cout << setw(134) << "|....|______|....|  ......|....|    |....|________ \n";
 	cout << setw(136) << "|________________|  |__________|    |_____________/\n\n\n";
 	cout << setw(138) << " _____________________________________________________________" << endl;
 	cout << setw(140) << "|                                                            |\n\n";

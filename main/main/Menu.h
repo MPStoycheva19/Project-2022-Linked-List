@@ -6,9 +6,9 @@
 #include <windows.h>
 #include <string>
 
-void menu();
+void menu(int chooseOption);
 void actions();
-void actionsMenu();
+void actionsMenu(int counter);
 void howToUse();
 void credits();
 void move();

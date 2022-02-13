@@ -11,6 +11,7 @@ using namespace std;
 int choice;
 
 int counter = 1;
+int countInfo = 0;
 
 Node* head = NULL;
 
@@ -307,7 +308,6 @@ void goBack()
 void addInfo()
 {
 	string input;
-
 	cout << setw(122) << "       ______              ___            ___\n";
 	cout << setw(125) << "    /......\\            |...|          |...|  \n";
 	cout << setw(131) << "   /.../\\...\\     ______|...|    ______|...|        \n";
@@ -316,13 +316,15 @@ void addInfo()
 	cout << setw(125) << "/..../     \\...\\  |_________|    |_________| \n\n";
 
 	cout << setw(120) << "Please enter the information you want to add" << endl;
-	cin.ignore();
-	
+	if (countInfo == 1)
+		cin.ignore();
+		
 	getline(cin, input);
 	push(&head, input);
 
 	cout << endl << "    Your information has been succesfully written" << endl << endl;
 	input.clear();
+	countInfo = 1;
 	goBack();
 }
 

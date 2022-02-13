@@ -28,42 +28,55 @@ void menu(int chooseOption)
 
 	if (chooseOption == 1)
 	{
-		cout << setw(107) << "---> 1. Actions" << endl << endl;
-		cout << setw(110) << "2. How to use" << endl << endl;
-		cout << setw(107) << "3. Credits" << endl << endl;
-		cout << setw(104) << "4. Exit" << endl << endl;
+		cout << setw(113) << "________________________________" << endl << endl;
+		cout << setw(114) << "|                                 |" << endl << endl;
+		cout << setw(114) << "|        ---> 1. Actions          |" << endl << endl;
+		cout << setw(114) << "|           2. How to use         |" << endl << endl;
+		cout << setw(114) << "|             3. Credits          |" << endl << endl;
+		cout << setw(114) << "|             4. Exit             |" << endl << endl;
+		cout << setw(114) << "|_________________________________|" << endl << endl;
 	}
 	else if (chooseOption == 2)
 	{
-		cout << setw(107) << "1. Actions" << endl << endl;
-		cout << setw(110) << "---> 2. How to use" << endl << endl;
-		cout << setw(107) << "3. Credits" << endl << endl;
-		cout << setw(104) << "4. Exit" << endl << endl;
+		cout << setw(113) << "_________________________________" << endl << endl;
+		cout << setw(114) << "|                                 |" << endl << endl;
+		cout << setw(114) << "|            1. Actions           |" << endl << endl;
+		cout << setw(114) << "|      ---> 2. How to use         |" << endl << endl;
+		cout << setw(114) << "|            3. Credits           |" << endl << endl;
+		cout << setw(114) << "|            4. Exit              |" << endl << endl;
+		cout << setw(114) << "|_________________________________|" << endl << endl;
 	}
 	else if (chooseOption == 3)
 	{
-		cout << setw(107) << "1. Actions" << endl << endl;
-		cout << setw(110) << "2. How to use" << endl << endl;
-		cout << setw(107) << "---> 3. Credits" << endl << endl;
-		cout << setw(104) << "4. Exit" << endl << endl;
+		cout << setw(113) << "_________________________________" << endl << endl;
+		cout << setw(114) << "|                                 |" << endl << endl;
+		cout << setw(114) << "|             1. Actions          |" << endl << endl;
+		cout << setw(114) << "|            2. How to use        |" << endl << endl;
+		cout << setw(114) << "|        ---> 3. Credits          |" << endl << endl;
+		cout << setw(114) << "|             4. Exit             |" << endl << endl;
+		cout << setw(114) << "|_________________________________|" << endl << endl;
 	}
 	else if (chooseOption == 4)
 	{
-		cout << setw(107) << "1. Actions" << endl << endl;
-		cout << setw(110) << "2. How to use" << endl << endl;
-		cout << setw(107) << "3. Credits" << endl << endl;
-		cout << setw(104) << "---> 4. Exit" << endl << endl;
+		cout << setw(113) << "_________________________________" << endl << endl;
+		cout << setw(114) << "|                                 |" << endl << endl;
+		cout << setw(114) << "|             1. Actions          |" << endl << endl;
+		cout << setw(114) << "|            2. How to use        |" << endl << endl;
+		cout << setw(114) << "|             3. Credits          |" << endl << endl;
+		cout << setw(114) << "|          ---> 4. Exit           |" << endl << endl;
+		cout << setw(114) << "|_________________________________|" << endl << endl;
 	}
 
-	cout << setw(122) << "You can navigate using the arrow keys" << endl;
-	cout << setw(125) << "but for more information go to -How to use-" << endl;
+	cout << endl;
+	cout << setw(116) << "You can navigate using the arrow keys" << endl;
+	cout << setw(119) << "but for more information go to -How to use-" << endl;
 }
 
 void options()
 {
 	menu(counter);
 	cout << endl;
-	cout << setw(113) << "Current selection " << counter << endl;
+	
 	char key;
 	for (int i = 0;;)
 	{
@@ -125,7 +138,7 @@ void options()
 
 void actionsMenu(int counter)
 {
-	cout << endl << endl;
+	
 	cout << setw(156) << "       ______        __________     _____________       __________       _________        ____      ____ \n";
 	cout << setw(156) << "    /......\\      |.........|    |............|      |..........|     |.........|      |....\\    |....|\n";
 	cout << setw(156) << "   /.../\\...\\     |...|              |....|             |....|        |...| |...|      |.....\\   |....|\n";
@@ -186,9 +199,8 @@ void actionsMenu(int counter)
 void actions()
 {
 	actionsMenu(counter);
-
 	cout << endl;
-	cout << setw(115)<< "Current selection " << counter << endl;
+	
 	char key;
 	for (int i = 0;;)
 	{
@@ -248,8 +260,8 @@ void actions()
 void goBack()
 {
 	string choice;
-	cout << "Do you want to return to the start menu?" << endl;
-	cout << "Yes/No" << endl;
+	cout << "  ->  Do you want to return to the start menu?" << endl;
+	cout << "      Yes/No" << endl;
 	cin >> choice;
 
 	if (choice == "yes" or choice == "Yes")
@@ -271,8 +283,8 @@ void goBack()
 		{
 			system("CLS");
 			cout << "Incorrect input" << endl;
-			cout << " Do you want to return to the start menu?" << endl;
-			cout << "Yes/No" << endl;
+			cout << "  ->  Do you want to return to the start menu?" << endl;
+			cout << "      Yes/No" << endl;
 			cin >> choice;
 			if (choice == "yes" or choice == "Yes")
 			{
@@ -295,36 +307,59 @@ void goBack()
 void addInfo()
 {
 	string input;
-	cout << "                         Add info" << endl;
-	cout << "        Please enter the information you want to add" << endl;
+
+	cout << setw(122) << "       ______              ___            ___\n";
+	cout << setw(125) << "    /......\\            |...|          |...|  \n";
+	cout << setw(131) << "   /.../\\...\\     ______|...|    ______|...|        \n";
+	cout << setw(123) << "  /..........\\    |...| |...|    |...| |...|\n";
+	cout << setw(124) << " /..../   \\...\\   |...|_|...|    |...|_|...| \n";
+	cout << setw(125) << "/..../     \\...\\  |_________|    |_________| \n\n";
+
+	cout << setw(120) << "Please enter the information you want to add" << endl;
 	cin.ignore();
+	
 	getline(cin, input);
 	push(&head, input);
-	cout << endl << "Your information has been succesfully written" << endl;
+
+	cout << endl << "    Your information has been succesfully written" << endl << endl;
 	input.clear();
 	goBack();
 }
 
 void deleteInfo()
 {
-	cout << "         Please select the information which you want to delete" << endl;
+	cout << setw(132) << "        ___     _________     ____           _________    __________    _________\n";
+	cout << setw(134) << "       |...|   |.........|   |...|          |.........|  |..........|  |.........|\n";
+	cout << setw(134) << "  _____|...|   |...|_____    |...|          |...|_____       |...|     |...|_____ \n";
+	cout << setw(134) << " |...| |...|   |.........|   |...|          |.........|      |...|     |.........|\n";
+	cout << setw(133) << " |...|_|...|   |...|_____    |...|______    |...|            |...|     |...|_____\n";
+	cout << setw(135) << " |_________|   |_________|   |__________|   |_________|      |___|     |_________|\n\n";
+
+	cout << endl;
+	cout << setw(120) << "Please select the information which you want to delete" << endl << endl;
 	printList(head);
+
 	int count = getCount(head);
 	int c;
-	cout << "      Please enter the number of the element which you want to delete" << endl;
+
+	cout << "      Please enter the number of the element which you want to delete" << endl << endl;
 	cout << "        Enter 0 to go back  " << endl;
 	cin >> c;
-	if (c == 0) {
+
+	if (c == 0) 
+	{
 		goBack();
 	}
 	if (c <= count && c >= 1)
 	{
 		c--;
 		deleteAtPosition(&head, c);
+
 		cout << "Information has been deleted succesfully" << endl;
 		goBack();
 	}
-	else {
+	else 
+	{
 		/*deleteNode(&head, info);*/
 		cout << "Incorrect input" << endl;
 		goBack();
@@ -333,17 +368,20 @@ void deleteInfo()
 
 void searchInfo()
 {
-	cout << "               Search" << endl;
-	cout << "      Please type the information you would like to search" << endl;
+	cout << setw(120)<< "Search" << endl;
+	cout << setw(120) << "Please type the information you would like to search" << endl;
+
 	cin.ignore();
 	string input;
 	getline(cin, input);
+
 	if (searchData(head, input) == "0") 
 	{ 
 		cout << "There is no such information" << endl; 
 		goBack(); 
 	}
-	else {
+	else 
+	{
 		cout << endl << "Here are your search results: " << searchData(head, input) << endl;
 		goBack();
 	}
@@ -414,7 +452,4 @@ void move()
 		cout << "Exited the program successfully." << endl;
 		exit(0);
 	}
-
-
-
 }

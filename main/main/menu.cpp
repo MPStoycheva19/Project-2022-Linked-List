@@ -419,7 +419,10 @@ void howToUse()
 
 void credits()
 {
-	cout << "Credits" << endl;
+	cout << "Marieta Stoycheva - Scrum Trainer" << endl;
+	cout << "Georgi Hrisimov - Front-End Developer" << endl;
+	cout << "Egor Semenov - Back-End Developer" << endl;
+	cout << "Yoan Tanev - QA" << endl << endl;
 	goBack();
 }
 

@@ -22,3 +22,4 @@ void searchInfo();
 
 #define KEY_UP 72
 #define KEY_DOWN 80
+#define _WIN32_WINNT  0x0500

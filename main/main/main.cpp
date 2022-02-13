@@ -6,5 +6,7 @@ using namespace std;
 
 int main()
 {
+    HWND hWnd = GetConsoleWindow();
+    ShowWindow(hWnd, SW_SHOWMAXIMIZED);
     options();
 }

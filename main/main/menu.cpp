@@ -137,7 +137,7 @@ void options()
 	}
 }
 
-void actionsMenu(int counter)
+void actionsMenu(int counter)//function that displays all actions you can do
 {
 	
 	cout << setw(156) << "       ______        __________     _____________       __________       _________        ____      ____ \n";
@@ -197,7 +197,7 @@ void actionsMenu(int counter)
 	cout << setw(128) << "You can navigate using the arrow keys\n\n";
 }
 
-void actions()
+void actions()//display all actions in the start menu
 {
 	actionsMenu(counter);
 	cout << endl;
@@ -258,7 +258,7 @@ void actions()
 }
 
 
-void goBack()
+void goBack()//function that asks you if you want to go to the start menu
 {
 	string choice;
 	cout << "  ->  Do you want to return to the start menu?" << endl;
@@ -277,7 +277,7 @@ void goBack()
 		system("CLS");
 		options();
 	}
-	else
+	else //if your input did not match "yes" or "no", repeat the whole action
 	{
 		string save;
 		for (bool i = 1; i;)
@@ -305,7 +305,7 @@ void goBack()
 	}
 }
 
-void addInfo()
+void addInfo()//function that allows you to input information
 {
 	string input;
 	cout << setw(122) << "       ______              ___            ___\n";
@@ -328,7 +328,7 @@ void addInfo()
 	goBack();
 }
 
-void deleteInfo()
+void deleteInfo()//function that allows you to delete information
 {
 	cout << setw(132) << "        ___     _________     ____           _________    __________    _________\n";
 	cout << setw(134) << "       |...|   |.........|   |...|          |.........|  |..........|  |.........|\n";
@@ -367,7 +367,7 @@ void deleteInfo()
 	}	
 }
 
-void searchInfo()
+void searchInfo()//function that allows you to search information
 {
 	cout << setw(120)<< "Search" << endl;
 	cout << setw(120) << "Please type the information you would like to search" << endl;
@@ -388,7 +388,7 @@ void searchInfo()
 	}
 }
 
-void howToUse()
+void howToUse()//function that displays all the things you can do
 {
 	cout << endl << endl;
 	cout << setw(133) << "|....|      |....|  |...........    |............/\n";
@@ -426,7 +426,7 @@ void credits()
 	goBack();
 }
 
-void move()
+void move()//function that depending on your input redirects you to another manu 
 {
 	cout << endl;
 	cout << "Choose where do you want to go ";

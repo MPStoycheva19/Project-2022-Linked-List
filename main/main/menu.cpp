@@ -29,7 +29,7 @@ void menu(int chooseOption)
 
 	if (chooseOption == 1)
 	{	
-		cout << setw(113) << "________________________________" << endl << endl;
+		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(81) << "| ";
 		SetConsoleTextAttribute(h, 2);
@@ -386,9 +386,14 @@ void deleteInfo()//function that allows you to delete information
 
 void searchInfo()//function that allows you to search information
 {
+	cout << setw(133) << "  __________    _________       ______        _________  _________    ___     ___\n";
+	cout << setw(134) << "|....______|  |.........|     /......\\     |...____..| |...._____|  |...|   |...|\n";
+	cout << setw(134) << "|...|______   |...|_____     /.../\\...\\    |..|____|.| |...|        |...|___|...|\n";
+	cout << setw(134) << "|_______...|  |.........|   /..........\\   |.......__| |...|        |....___....|\n";
+	cout << setw(134) << " _______|..|  |...|_____   /..../   \\...\\  |..| \\..\\   |...|_____   |...|   |...|\n";
+	cout << setw(134) << "|__________|  |_________| /____/     \\___\\ |__|  \\__\\  |_________|  |___|   |___|\n";
 
-	cout << setw(134) << "Please type the information you would like to search" << endl;
-
+	cout << setw(120) << "\n\n--> Type to search an event:\n\n\n";
 	cin.ignore();
 	string input;
 	getline(cin, input);

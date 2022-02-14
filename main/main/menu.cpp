@@ -14,7 +14,7 @@ int counter = 1;
 int countInfo = 0;
 
 Node* head = NULL;
-
+HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void menu(int chooseOption)
 {
@@ -28,10 +28,15 @@ void menu(int chooseOption)
 	cout << setw(152) << "|..|                |..|        |_____________/      |..|    \\........|        |________________|\n\n\n";
 
 	if (chooseOption == 1)
-	{
+	{	
 		cout << setw(113) << "________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
-		cout << setw(114) << "|        ---> 1. Actions          |" << endl << endl;
+		cout << setw(81) << "| ";
+		SetConsoleTextAttribute(h, 2);
+		cout << "       ---> 1. Actions          ";
+		SetConsoleTextAttribute(h, 7);
+		cout<<"|" << endl << endl;
+
 		cout << setw(114) << "|           2. How to use         |" << endl << endl;
 		cout << setw(114) << "|             3. Credits          |" << endl << endl;
 		cout << setw(114) << "|             4. Exit             |" << endl << endl;
@@ -42,7 +47,11 @@ void menu(int chooseOption)
 		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(114) << "|            1. Actions           |" << endl << endl;
-		cout << setw(114) << "|      ---> 2. How to use         |" << endl << endl;
+		cout << setw(81) << "| ";
+		SetConsoleTextAttribute(h, 2);
+		cout << "       ---> 2. How to use       ";
+		SetConsoleTextAttribute(h, 7);
+		cout<<"| " << endl << endl;
 		cout << setw(114) << "|            3. Credits           |" << endl << endl;
 		cout << setw(114) << "|            4. Exit              |" << endl << endl;
 		cout << setw(114) << "|_________________________________|" << endl << endl;
@@ -53,18 +62,26 @@ void menu(int chooseOption)
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(114) << "|             1. Actions          |" << endl << endl;
 		cout << setw(114) << "|            2. How to use        |" << endl << endl;
-		cout << setw(114) << "|        ---> 3. Credits          |" << endl << endl;
+		cout << setw(80) << "|";
+		SetConsoleTextAttribute(h, 2);
+		cout << "       ---> 3. Credits           ";
+		SetConsoleTextAttribute(h, 7);
+			cout<<"| " << endl << endl;
 		cout << setw(114) << "|             4. Exit             |" << endl << endl;
 		cout << setw(114) << "|_________________________________|" << endl << endl;
 	}
 	else if (chooseOption == 4)
-	{
+	{		
 		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(114) << "|             1. Actions          |" << endl << endl;
 		cout << setw(114) << "|            2. How to use        |" << endl << endl;
 		cout << setw(114) << "|             3. Credits          |" << endl << endl;
-		cout << setw(114) << "|          ---> 4. Exit           |" << endl << endl;
+		cout << setw(80) << "|";
+		SetConsoleTextAttribute(h, 2);
+		cout << "         ---> 4. Exit            ";
+		SetConsoleTextAttribute(h, 7);
+		cout<<"| " << endl << endl;
 		cout << setw(114) << "|_________________________________|" << endl << endl;
 	}
 

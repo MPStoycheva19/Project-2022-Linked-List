@@ -37,7 +37,7 @@ void menu(int chooseOption)
 		SetConsoleTextAttribute(h, 7);
 		cout<<"|" << endl << endl;
 
-		cout << setw(114) << "|           2. How to use         |" << endl << endl;
+		cout << setw(114) << "|             2. How to use       |" << endl << endl;
 		cout << setw(114) << "|             3. Credits          |" << endl << endl;
 		cout << setw(114) << "|             4. Exit             |" << endl << endl;
 		cout << setw(114) << "|_________________________________|" << endl << endl;
@@ -61,7 +61,7 @@ void menu(int chooseOption)
 		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(114) << "|             1. Actions          |" << endl << endl;
-		cout << setw(114) << "|            2. How to use        |" << endl << endl;
+		cout << setw(114) << "|             2. How to use       |" << endl << endl;
 		cout << setw(80) << "|";
 		SetConsoleTextAttribute(h, 2);
 		cout << "       ---> 3. Credits           ";
@@ -75,7 +75,7 @@ void menu(int chooseOption)
 		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(114) << "|             1. Actions          |" << endl << endl;
-		cout << setw(114) << "|            2. How to use        |" << endl << endl;
+		cout << setw(114) << "|             2. How to use       |" << endl << endl;
 		cout << setw(114) << "|             3. Credits          |" << endl << endl;
 		cout << setw(80) << "|";
 		SetConsoleTextAttribute(h, 2);
@@ -351,7 +351,7 @@ void deleteInfo()//function that allows you to delete information
 	cout << setw(134) << "       |...|   |.........|   |...|          |.........|  |..........|  |.........|\n";
 	cout << setw(134) << "  _____|...|   |...|_____    |...|          |...|_____       |...|     |...|_____ \n";
 	cout << setw(134) << " |...| |...|   |.........|   |...|          |.........|      |...|     |.........|\n";
-	cout << setw(133) << " |...|_|...|   |...|_____    |...|______    |...|            |...|     |...|_____\n";
+	cout << setw(133) << " |...|_|...|   |...|_____    |...|______    |...|_____       |...|     |...|_____\n";
 	cout << setw(135) << " |_________|   |_________|   |__________|   |_________|      |___|     |_________|\n\n";
 
 	cout << endl;
@@ -386,8 +386,8 @@ void deleteInfo()//function that allows you to delete information
 
 void searchInfo()//function that allows you to search information
 {
-	cout << setw(120)<< "Search" << endl;
-	cout << setw(120) << "Please type the information you would like to search" << endl;
+
+	cout << setw(134) << "Please type the information you would like to search" << endl;
 
 	cin.ignore();
 	string input;
@@ -436,10 +436,22 @@ void howToUse()//function that displays all the things you can do
 
 void credits()
 {
-	cout << "Marieta Stoycheva - Scrum Trainer" << endl;
-	cout << "Georgi Hrisimov - Front-End Developer" << endl;
-	cout << "Egor Semenov - Back-End Developer" << endl;
-	cout << "Yoan Tanev - QA" << endl << endl;
+	cout << setw(134) << "  __________    _________         ______       ___       ___ \n";
+	cout << setw(134) << "|..........|  |.........|       /......\\     |...\\     /...|\n";
+	cout << setw(134) << "|...|     |...|_____       /.../\\...\\    |....\\   /....|\n";
+	cout << setw(134) << "|...|     |.........|     /..........\\   |.|\\..\\ /../|.|\n";
+	cout << setw(135) << "|...|     |...|_____     /..../   \\...\\  |.|         |.| \n";
+	cout << setw(136) << "|___|     |_________|   /____/     \\___\\ |_|         |_|\n\n\n";
+
+	cout << setw(130) << " ______________________________________________________" << endl << endl;
+	cout << setw(130) << "|                                                    |" << endl << endl;
+	cout << setw(130) << "|         Marieta Stoycheva - Scrum Trainer          |" << endl << endl;
+	cout << setw(130) << "|       Georgi Hrisimov - Front-End Developer        |" << endl << endl;
+	cout << setw(130) << "|         Egor Semenov - Back-End Developer          |" << endl << endl;
+	cout << setw(130) << "|                    Yoan Tanev - QA                 |" << endl << endl;
+	cout << setw(130) << "|                                                    |" << endl << endl;
+	cout << setw(130) << "|____________________________________________________|" << endl << endl;
+
 	goBack();
 }
 

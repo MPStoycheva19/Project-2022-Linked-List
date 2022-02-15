@@ -386,11 +386,11 @@ void deleteInfo()//function that allows you to delete information
 
 void searchInfo()//function that allows you to search information
 {
-<<<<<<< HEAD
+
 	
 	cout << setw(120) << "Please type the information you would like to search" << endl;
 
-=======
+
 	cout << setw(133) << "  __________    _________       ______        _________  _________    ___     ___\n";
 	cout << setw(134) << "|....______|  |.........|     /......\\     |...____..| |...._____|  |...|   |...|\n";
 	cout << setw(134) << "|...|______   |...|_____     /.../\\...\\    |..|____|.| |...|        |...|___|...|\n";
@@ -399,7 +399,7 @@ void searchInfo()//function that allows you to search information
 	cout << setw(134) << "|__________|  |_________| /____/     \\___\\ |__|  \\__\\  |_________|  |___|   |___|\n";
 
 	cout << setw(120) << "\n\n--> Type to search an event:\n\n\n";
->>>>>>> 28b1f440adc5cecaed3319d9b5d2d8a4fbdce843
+
 	cin.ignore();
 	string input;
 	getline(cin, input);

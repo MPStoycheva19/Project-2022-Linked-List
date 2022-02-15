@@ -386,7 +386,7 @@ void deleteInfo()//function that allows you to delete information
 
 void searchInfo()//function that allows you to search information
 {
-	cout << setw(120)<< "Search" << endl;
+	
 	cout << setw(120) << "Please type the information you would like to search" << endl;
 
 	cin.ignore();
@@ -400,7 +400,8 @@ void searchInfo()//function that allows you to search information
 	}
 	else 
 	{
-		cout << endl << "Here are your search results: " << searchData(head, input) << endl;
+		cout << endl << "Here are your search results: " << endl << endl;
+		cout << searchData(head, input) << endl << endl;
 		goBack();
 	}
 }

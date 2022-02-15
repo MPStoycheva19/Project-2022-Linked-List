@@ -14,7 +14,7 @@ int counter = 1;
 int countInfo = 0;
 
 Node* head = NULL;
-
+HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void menu(int chooseOption)
 {
@@ -28,11 +28,16 @@ void menu(int chooseOption)
 	cout << setw(152) << "|..|                |..|        |_____________/      |..|    \\........|        |________________|\n\n\n";
 
 	if (chooseOption == 1)
-	{
-		cout << setw(113) << "________________________________" << endl << endl;
+	{	
+		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
-		cout << setw(114) << "|        ---> 1. Actions          |" << endl << endl;
-		cout << setw(114) << "|           2. How to use         |" << endl << endl;
+		cout << setw(81) << "| ";
+		SetConsoleTextAttribute(h, 2);
+		cout << "       ---> 1. Actions          ";
+		SetConsoleTextAttribute(h, 7);
+		cout<<"|" << endl << endl;
+
+		cout << setw(114) << "|             2. How to use       |" << endl << endl;
 		cout << setw(114) << "|             3. Credits          |" << endl << endl;
 		cout << setw(114) << "|             4. Exit             |" << endl << endl;
 		cout << setw(114) << "|_________________________________|" << endl << endl;
@@ -42,7 +47,11 @@ void menu(int chooseOption)
 		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(114) << "|            1. Actions           |" << endl << endl;
-		cout << setw(114) << "|      ---> 2. How to use         |" << endl << endl;
+		cout << setw(81) << "| ";
+		SetConsoleTextAttribute(h, 2);
+		cout << "       ---> 2. How to use       ";
+		SetConsoleTextAttribute(h, 7);
+		cout<<"| " << endl << endl;
 		cout << setw(114) << "|            3. Credits           |" << endl << endl;
 		cout << setw(114) << "|            4. Exit              |" << endl << endl;
 		cout << setw(114) << "|_________________________________|" << endl << endl;
@@ -52,19 +61,27 @@ void menu(int chooseOption)
 		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(114) << "|             1. Actions          |" << endl << endl;
-		cout << setw(114) << "|            2. How to use        |" << endl << endl;
-		cout << setw(114) << "|        ---> 3. Credits          |" << endl << endl;
+		cout << setw(114) << "|             2. How to use       |" << endl << endl;
+		cout << setw(80) << "|";
+		SetConsoleTextAttribute(h, 2);
+		cout << "       ---> 3. Credits           ";
+		SetConsoleTextAttribute(h, 7);
+			cout<<"| " << endl << endl;
 		cout << setw(114) << "|             4. Exit             |" << endl << endl;
 		cout << setw(114) << "|_________________________________|" << endl << endl;
 	}
 	else if (chooseOption == 4)
-	{
+	{		
 		cout << setw(113) << "_________________________________" << endl << endl;
 		cout << setw(114) << "|                                 |" << endl << endl;
 		cout << setw(114) << "|             1. Actions          |" << endl << endl;
-		cout << setw(114) << "|            2. How to use        |" << endl << endl;
+		cout << setw(114) << "|             2. How to use       |" << endl << endl;
 		cout << setw(114) << "|             3. Credits          |" << endl << endl;
-		cout << setw(114) << "|          ---> 4. Exit           |" << endl << endl;
+		cout << setw(80) << "|";
+		SetConsoleTextAttribute(h, 2);
+		cout << "         ---> 4. Exit            ";
+		SetConsoleTextAttribute(h, 7);
+		cout<<"| " << endl << endl;
 		cout << setw(114) << "|_________________________________|" << endl << endl;
 	}
 
@@ -137,7 +154,7 @@ void options()
 	}
 }
 
-void actionsMenu(int counter)
+void actionsMenu(int counter)//function that displays all actions you can do
 {
 	
 	cout << setw(156) << "       ______        __________     _____________       __________       _________        ____      ____ \n";
@@ -197,7 +214,7 @@ void actionsMenu(int counter)
 	cout << setw(128) << "You can navigate using the arrow keys\n\n";
 }
 
-void actions()
+void actions()//display all actions in the start menu
 {
 	actionsMenu(counter);
 	cout << endl;
@@ -258,7 +275,7 @@ void actions()
 }
 
 
-void goBack()
+void goBack()//function that asks you if you want to go to the start menu
 {
 	string choice;
 	cout << "  ->  Do you want to return to the start menu?" << endl;
@@ -277,7 +294,7 @@ void goBack()
 		system("CLS");
 		options();
 	}
-	else
+	else //if your input did not match "yes" or "no", repeat the whole action
 	{
 		string save;
 		for (bool i = 1; i;)
@@ -305,7 +322,7 @@ void goBack()
 	}
 }
 
-void addInfo()
+void addInfo()//function that allows you to input information
 {
 	string input;
 	cout << setw(122) << "       ______              ___            ___\n";
@@ -328,13 +345,13 @@ void addInfo()
 	goBack();
 }
 
-void deleteInfo()
+void deleteInfo()//function that allows you to delete information
 {
 	cout << setw(132) << "        ___     _________     ____           _________    __________    _________\n";
 	cout << setw(134) << "       |...|   |.........|   |...|          |.........|  |..........|  |.........|\n";
 	cout << setw(134) << "  _____|...|   |...|_____    |...|          |...|_____       |...|     |...|_____ \n";
 	cout << setw(134) << " |...| |...|   |.........|   |...|          |.........|      |...|     |.........|\n";
-	cout << setw(133) << " |...|_|...|   |...|_____    |...|______    |...|            |...|     |...|_____\n";
+	cout << setw(133) << " |...|_|...|   |...|_____    |...|______    |...|_____       |...|     |...|_____\n";
 	cout << setw(135) << " |_________|   |_________|   |__________|   |_________|      |___|     |_________|\n\n";
 
 	cout << endl;
@@ -367,10 +384,21 @@ void deleteInfo()
 	}	
 }
 
-void searchInfo()
+void searchInfo()//function that allows you to search information
 {
-	cout << setw(120)<< "Search" << endl;
+
+	
 	cout << setw(120) << "Please type the information you would like to search" << endl;
+
+
+	cout << setw(133) << "  __________    _________       ______        _________  _________    ___     ___\n";
+	cout << setw(134) << "|....______|  |.........|     /......\\     |...____..| |...._____|  |...|   |...|\n";
+	cout << setw(134) << "|...|______   |...|_____     /.../\\...\\    |..|____|.| |...|        |...|___|...|\n";
+	cout << setw(134) << "|_______...|  |.........|   /..........\\   |.......__| |...|        |....___....|\n";
+	cout << setw(134) << " _______|..|  |...|_____   /..../   \\...\\  |..| \\..\\   |...|_____   |...|   |...|\n";
+	cout << setw(134) << "|__________|  |_________| /____/     \\___\\ |__|  \\__\\  |_________|  |___|   |___|\n";
+
+	cout << setw(120) << "\n\n--> Type to search an event:\n\n\n";
 
 	cin.ignore();
 	string input;
@@ -383,12 +411,13 @@ void searchInfo()
 	}
 	else 
 	{
-		cout << endl << "Here are your search results: " << searchData(head, input) << endl;
+		cout << endl << "Here are your search results: " << endl << endl;
+		cout << searchData(head, input) << endl << endl;
 		goBack();
 	}
 }
 
-void howToUse()
+void howToUse()//function that displays all the things you can do
 {
 	cout << endl << endl;
 	cout << setw(133) << "|....|      |....|  |...........    |............/\n";
@@ -419,14 +448,26 @@ void howToUse()
 
 void credits()
 {
-	cout << "Marieta Stoycheva - Scrum Trainer" << endl;
-	cout << "Georgi Hrisimov - Front-End Developer" << endl;
-	cout << "Egor Semenov - Back-End Developer" << endl;
-	cout << "Yoan Tanev - QA" << endl << endl;
+	cout << setw(134) << "  __________    _________         ______       ___       ___ \n";
+	cout << setw(134) << "|..........|  |.........|       /......\\     |...\\     /...|\n";
+	cout << setw(134) << "|...|     |...|_____       /.../\\...\\    |....\\   /....|\n";
+	cout << setw(134) << "|...|     |.........|     /..........\\   |.|\\..\\ /../|.|\n";
+	cout << setw(135) << "|...|     |...|_____     /..../   \\...\\  |.|         |.| \n";
+	cout << setw(136) << "|___|     |_________|   /____/     \\___\\ |_|         |_|\n\n\n";
+
+	cout << setw(130) << " ______________________________________________________" << endl << endl;
+	cout << setw(130) << "|                                                    |" << endl << endl;
+	cout << setw(130) << "|         Marieta Stoycheva - Scrum Trainer          |" << endl << endl;
+	cout << setw(130) << "|       Georgi Hrisimov - Front-End Developer        |" << endl << endl;
+	cout << setw(130) << "|         Egor Semenov - Back-End Developer          |" << endl << endl;
+	cout << setw(130) << "|                    Yoan Tanev - QA                 |" << endl << endl;
+	cout << setw(130) << "|                                                    |" << endl << endl;
+	cout << setw(130) << "|____________________________________________________|" << endl << endl;
+
 	goBack();
 }
 
-void move()
+void move()//function that depending on your input redirects you to another manu 
 {
 	cout << endl;
 	cout << "Choose where do you want to go ";
